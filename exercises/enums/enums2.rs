@@ -3,11 +3,15 @@
 // Execute `rustlings hint enums2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 #[derive(Debug)]
 enum Message {
     // TODO: define the different variants used below
+    // comment: Move是匿名结构体，可以被{:?}转为对应字符串，而具名结构体则不行
+    Move {x: i32, y: i32},
+    Echo(String),
+    ChangeColor(u32, u8, u8),
+    Quit,
 }
 
 impl Message {
